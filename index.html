@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-eqiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width",intial-scale="1.0"/>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFpCjEUQouq2+1" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <script LANGUAGE="JavaScript" type="text/javascript" name="el">
+            function display() {
+              DispWin = window.open('','NewWin', 'toolbar=yes,status=yes,width=800,height=1500,')
+              message = "<ul><li><b>NAME: </b>" + document.form1.name.value;
+              message += "<li><b>EMAIL: </b>" + document.form1.email.value;
+                message += "<li><b>WEBSITE: </b>" + document.form1.website.value;
+                message += "<li><b>Image: </b>" + document.form1.image.value;
+                message += "<li><b>GENDER: </b>" + document.form1.gender.value;
+                    message += "<li><b>SKILLS: </b>" + document.form1.legend.value+ "</ul>";
+              DispWin.document.write(message);
+            }
+            </script>
+       
+        <title>Student Enrollment Form</title>
+        </head>
+        <body>
+            <div class="nav-bar d-flex">
+                <h2>---------------------------STUDENT ENROLLMENT FORM-------------------------</h2>
+            </div> 
+            <div class="students row ">
+                <div class="enroll-student col-md">
+                    <form action="" name="form1"  class="main-form form-check needs-validation" novalidate>
+                        <div class="form-group row">
+                            <label for="name" class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" minlength="10"  id="name" required/>
+                                <div class="invalid-feedback">please enter your name</div>
+                            </div> 
+                        </div>    
+   
+
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" id="email" class="form-control"  required/>
+                                <div class="invalid-feedback">invalid!!!please enter your valid email</div>
+                            </div> 
+                        </div>    
+                        
+                        <div class="form-group row">
+                            <label for="website" class="col-sm-2 col-form-label">Website</label>
+                            <div class="col-sm-10">
+                                <input type="url" id="website" class="form-control"  required/>
+                                <div class="invalid-feedback">invalid!!!please enter your valid website</div>
+                            </div> 
+                        </div> 
+                        <div class="form-group row">
+                            <label for="image" class="col-sm-2 col-form-label">Image link</label>
+                            <div class="col-sm-10">
+                                <input type="url" id="image" class="form-control"  required/>
+                                <div class="invalid-feedback">invalid!!!please enter your valid image</div>
+                            </div> 
+                        </div> 
+                        <fieldset class="form-group row">
+                            <legend class="col-form-label col-sm-2 float-sm-left pt-0">
+                                Gender 
+                                </legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                <input type="radio" id="male" name="gender" value="male" class="form-check-input"  required/>
+                                <label class="form-check-label" for="male">Male</label>
+                            </div> 
+                        
+                        
+                            <div class="form-check">
+                                
+                                <input type="radio" id="female" name="gender" value="female" class="form-check-input"  required/>
+                            <label class="form-check-label" for="female">Female</label>
+                            &nbsp; <div class="invalid-feedback">invalid!!!please choose</div>
+                        </div> 
+                    </div>                            
+                </fieldset>
+
+                <fieldset class="form-group row">
+                    <legend class="col-form-label col-sm-2 float-sm-left pt-0">
+SKILLS                        </legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                        <input type="radio" id="html" name="legend" value="html" class="form-check-input"  required/>
+                        <label class="form-check-label" for="html">html</label>
+                    </div> 
+                
+                
+                    <div class="form-check">
+                        
+                        <input type="radio" id="java" name="legend" value="java" class="form-check-input"  required/>
+                    <label class="form-check-label" for="java">java</label>
+                    &nbsp; 
+                    <div class="invalid-feedback">invalid!!!please choose</div>
+                </div> 
+                <div class="form-check">
+                        
+                    <input type="radio" id="css" name="legend" value="css" class="form-check-input"  required/>
+                <label class="form-check-label" for="css">css</label>
+                &nbsp; <div class="invalid-feedback">invalid!!!please choose</div>
+            </div> 
+            </div>                            
+        </fieldset>
+<button type="submit" name="button" class="btn btn-primary" onClick="display();"> Enroll Student </button>&nbsp;&nbsp;&nbsp;
+<button type="reset" class="btn btn-danger">cancel</button>
+</form>
+</div>
+<div id="enrolled-students" class="col-md col-12">      
+    </div>
+  </div>
+</body>                       
+</html>
